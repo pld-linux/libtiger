@@ -29,8 +29,8 @@ libtiger to biblioteka renderująca dla strumieni Kate, korzystająca z
 bibliotek Pango i Cairo.
 
 %package devel
-Summary:	Header files for libtiger libraries
-Summary(pl.UTF-8):	Pliki nagłówkowe bibliotek libtiger
+Summary:	Header files for libtiger library
+Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libtiger
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	libkate-devel >= 0.2.0
@@ -38,23 +38,23 @@ Requires:	pango-devel >= 1:0.16
 
 %description devel
 This package contains the header files for developing applications
-that use libtiger libraries.
+that use libtiger library.
 
 %description devel -l pl.UTF-8
 Ten pakiet zawiera pliki nagłówkowe do tworzenia aplikacji
-wykorzystujących biblioteki libtiger.
+wykorzystujących bibliotekę libtiger.
 
 %package static
-Summary:	Static libtiger libraries
-Summary(pl.UTF-8):	Statyczne biblioteki libtiger
+Summary:	Static libtiger library
+Summary(pl.UTF-8):	Statyczna biblioteka libtiger
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
-Static libtiger libraries.
+Static libtiger library.
 
 %description static -l pl.UTF-8
-Statyczne biblioteki libtiger.
+Statyczna biblioteka libtiger.
 
 %prep
 %setup -q
