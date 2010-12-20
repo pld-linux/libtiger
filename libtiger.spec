@@ -16,6 +16,7 @@ URL:		http://code.google.com/p/libtiger/
 BuildRequires:	doxygen
 BuildRequires:	libkate-devel >= 0.2.0
 BuildRequires:	pango-devel >= 1:0.16
+BuildRequires:	pkgconfig
 Requires:	libkate >= 0.2.0
 Requires:	pango >= 1:0.16
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
