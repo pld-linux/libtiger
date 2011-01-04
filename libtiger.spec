@@ -5,20 +5,20 @@
 Summary:	Rendering library for Kate text streams using Pango and Cairo
 Summary(pl.UTF-8):	Biblioteka renderująca strumienie tekstowe Kate przy użyciu Pango i Cairo
 Name:		libtiger
-Version:	0.3.3
+Version:	0.3.4
 Release:	1
 License:	LGPL v2.1+
 Group:		Libraries
 #Source0Download: http://code.google.com/p/libtiger/downloads/list
 Source0:	http://libtiger.googlecode.com/files/%{name}-%{version}.tar.gz
-# Source0-md5:	e7b6b9a317b4762792b08fdff78b8c45
+# Source0-md5:	dc1dbeb658c95485ba10b9b2897b4ae2
 URL:		http://code.google.com/p/libtiger/
 BuildRequires:	doxygen
 BuildRequires:	libkate-devel >= 0.2.0
-BuildRequires:	pango-devel >= 1:0.16
+BuildRequires:	pango-devel >= 1:1.16
 BuildRequires:	pkgconfig
 Requires:	libkate >= 0.2.0
-Requires:	pango >= 1:0.16
+Requires:	pango >= 1:1.16
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -35,7 +35,7 @@ Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libtiger
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	libkate-devel >= 0.2.0
-Requires:	pango-devel >= 1:0.16
+Requires:	pango-devel >= 1:1.16
 
 %description devel
 This package contains the header files for developing applications
