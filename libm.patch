@@ -1,0 +1,38 @@
+--- libtiger-0.3.4/Makefile.am~
++++ libtiger-0.3.4/Makefile.am
+@@ -11,7 +11,7 @@
+ tigerpc_DATA=misc/pkgconfig/tiger.pc
+ noinst_DATA=misc/pkgconfig/tiger-uninstalled.pc
+ 
+-LIBTOOLFLAGS=--silent
++AM_LIBTOOLFLAGS=--silent
+ 
+ AM_CPPFLAGS=-I $(top_srcdir)/src -I $(top_srcdir)/include
+ 
+@@ -34,7 +34,7 @@ noinst_HEADERS=\
+ 
+ lib_libtiger_la_CFLAGS=@CWARNFLAGS_FULL@ @CFLAGS_FORTIFY_SOURCE@ @CFLAGS_DEBUG@ @CFLAGS_PROFILE@ \
+                        @PANGOCAIRO_CFLAGS@ @KATE_CFLAGS@ @PTHREAD_CFLAGS@
+-lib_libtiger_la_LIBADD=@PANGOCAIRO_LIBS@ @KATE_LIBS@ @PTHREAD_LIBS@
++lib_libtiger_la_LIBADD=@PANGOCAIRO_LIBS@ @KATE_LIBS@ @PTHREAD_LIBS@ -lm
+ lib_libtiger_la_LDFLAGS=-version-info @LIBTIGER_SHARED_VERSION@ -no-undefined
+ 
+ am__tar = ${AMTAR} chof - --owner=0 --group=0 --exclude=CVS --exclude=.cvsignore "$$tardir"
+--- libtiger-0.3.4/configure.ac~	2010-12-25 20:02:56.000000000 +0100
++++ libtiger-0.3.4/configure.ac	2019-03-28 23:33:54.284279440 +0100
+@@ -31,6 +31,7 @@
+ AC_PROG_GREP
+ AC_PROG_NM
+ AC_PROG_SED
++AM_PROG_AR
+ 
+ AC_C_CONST
+ AC_C_INLINE
+--- libtiger-0.3.4/doc/Makefile.am~	2010-12-25 20:09:06.000000000 +0100
++++ libtiger-0.3.4/doc/Makefile.am	2019-03-28 23:35:29.950030445 +0100
+@@ -1,4 +1,4 @@
+-LIBTOOLFLAGS=--silent
++AM_LIBTOOLFLAGS=--silent
+ 
+ # dependency to get doc to be built
+ noinst_DATA = .doc-dummy-target
