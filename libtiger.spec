@@ -6,14 +6,15 @@ Summary:	Rendering library for Kate text streams using Pango and Cairo
 Summary(pl.UTF-8):	Biblioteka renderująca strumienie tekstowe Kate przy użyciu Pango i Cairo
 Name:		libtiger
 Version:	0.3.4
-Release:	13
+Release:	14
 License:	LGPL v2.1+
 Group:		Libraries
-#Source0Download: http://code.google.com/p/libtiger/downloads/list
-Source0:	http://libtiger.googlecode.com/files/%{name}-%{version}.tar.gz
+# originally http://libtiger.googlecode.com/files/%{name}-%{version}.tar.gz
+# current repository http://git.xiph.org/?p=users/oggk/tiger.git;a=summary (no releases dir)
+Source0:	%{name}-%{version}.tar.gz
 # Source0-md5:	dc1dbeb658c95485ba10b9b2897b4ae2
 Patch0:		libm.patch
-URL:		http://code.google.com/p/libtiger/
+URL:		https://wiki.xiph.org/OggKate
 BuildRequires:	doxygen
 BuildRequires:	libkate-devel >= 0.2.0
 BuildRequires:	pango-devel >= 1:1.16
@@ -83,6 +84,9 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 cp -a examples/src/*.[ch] $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
+# obsoleted by pkg-config
+%{__rm} $RPM_BUILD_ROOT%{_libdir}/libtiger.la
+# packaged as %doc
 %{__rm} -r $RPM_BUILD_ROOT%{_docdir}/libtiger
 
 %clean
@@ -101,7 +105,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc doc/html/*
 %attr(755,root,root) %{_libdir}/libtiger.so
-%{_libdir}/libtiger.la
 %{_includedir}/tiger
 %{_pkgconfigdir}/tiger.pc
 %{_examplesdir}/%{name}-%{version}
