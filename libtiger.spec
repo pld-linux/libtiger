@@ -1,3 +1,4 @@
+# DEAD upstream (no activity since 2010)
 #
 # Conditional build:
 %bcond_without	tests		# build without tests
@@ -6,7 +7,7 @@ Summary:	Rendering library for Kate text streams using Pango and Cairo
 Summary(pl.UTF-8):	Biblioteka renderująca strumienie tekstowe Kate przy użyciu Pango i Cairo
 Name:		libtiger
 Version:	0.3.4
-Release:	14
+Release:	15
 License:	LGPL v2.1+
 Group:		Libraries
 # originally http://libtiger.googlecode.com/files/%{name}-%{version}.tar.gz
